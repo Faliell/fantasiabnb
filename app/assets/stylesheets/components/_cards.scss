@@ -5,8 +5,12 @@ body {
 background: #f8f8f8;;
 	background-attachment: fixed;
 	background-size: cover;
-
 	}
+
+#cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 
 #container{
 	box-shadow: 0 10px 10px 0 grey;
