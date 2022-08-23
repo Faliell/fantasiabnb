@@ -1,8 +1,9 @@
 
 <%= render "shared/navbar" %>
 
-
-<h2>Change your password</h2>
+<div class="header d-flex justify-content-center p-4">
+  <h2>Change your password</h2>
+</div>
 
 
 <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
