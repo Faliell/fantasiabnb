@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 <%= render "shared/navbar" %>
 
   h2>Change your password</h2>
+=======
+<%= render 'shared/navbar' %>
+
+<h2>Change your password</h2>
+>>>>>>> 87b0cc33eb17090543529222b194759d500acc02
 
 <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
