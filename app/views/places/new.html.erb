@@ -10,6 +10,7 @@
           <%= f.input :description, placeholder: 'Add a description', class:"form-label"%>
           </div>
           <%= f.input :price_day, placeholder: 'Add a price' %>
+          <%= f.input :photo, as: :file %>
           <div class="d-grid gap-2 col-2 mx-auto">
           <%= f.submit "Create", class: "btn btn-primary p-3" %>
           </div>
