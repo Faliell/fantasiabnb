@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,8 +14,39 @@
 </head>
 
 <body>
+
   <%= render 'shared/navbar' %>
   <%= render 'shared/cardsall' %>
   <%# cards %>
+<<<<<<< HEAD
+=======
+  <ul>
+    <%@places.each do |place| %>
+      <div id="cards">
+        <div id="container">
+          <div class="product-details">
+            <h1><%=place.name%></h1>
+            <div class="control">
+              <button class="btn">
+                <span class="price"><%=place.price_day%></span>
+                <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                <span class="buy">Get now</span>
+              </button>
+            </div>
+          </div>
+          <div class="product-image">
+            <img src="https://wallpaper.dog/large/17066191.jpg" alt="Hogwarts">
+            <div class="info">
+              <h2> Description</h2>
+              <%=place.description%>
+              <h4> Type: <%=place.place_type%></h4>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    <% end %>
+  </ul>
+>>>>>>> master
 </body>
 </html>
