@@ -1,13 +1,16 @@
 <%# cards %>
-  <ul>
-    <%@places.each do |place| %>
+<div class="container">
+<div class="row">
+  <% @random_3 = @places.limit(3)%>
+    <% @random_3.each do |place| %>
+    <div class="col-4">
       <div id="cards">
         <div id="container">
           <div class="product-details">
             <h1><%=place.name%></h1>
             <div class="control">
               <button class="btn">
-                <span class="price"><%=place.price_day%></span>
+                <span class="price"><%=place.price_day%></span><br>
                 <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
                 <span class="buy">Get now</span>
               </button>
@@ -23,5 +26,8 @@
           </div>
         </div>
       </div>
+  </div>
     <% end %>
-  </ul>
+
+  </div>
+</div>
