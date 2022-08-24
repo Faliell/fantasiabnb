@@ -1,0 +1,18 @@
+<%# places I am listing %>
+<% current_user.places.each do |place| %>
+  <%= place.name %>
+
+  <h3>My bookings:</h3>
+  <% if place.bookings.empty? %>
+    <p>No pending bookings</p>
+  <% else %>
+    <% place.bookings.each do |booking| %>
+      <%= booking.startdate %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%# places I am trying to book %>
+<% current_user.bookings.each do |booking| %>
+  <%= booking.place %>
+<% end %>
