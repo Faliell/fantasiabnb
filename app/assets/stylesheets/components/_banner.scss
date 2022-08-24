@@ -1,40 +1,95 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 15vmin;
   color: white;
   overflow: auto;
-  padding-left: 50px;
-
 }
 
-.banner h1 {
-  font-family: "Lucida Console";
-  margin-right: 15%;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
-  position: relative;
-  margin-left: 10%;
-  top:40%;
-  word-wrap: break-word;
+.container_banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .btn_banner {
-margin: 11px;
-padding: 10px;
-position: relative;
-top: 60%;
-left: 40%;
-background-color: rgb(154, 126, 102);
+  margin: 11px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(154, 126, 102);
 }
 
 
 .btn_banner:hover {
   margin: 11px;
   padding: 10px;
-  position: relative;
-  top: 60%;
-  left: 40%;
+  margin-left: auto;
+  margin-right: auto;
   background-color: rgb(154, 126, 102);
   color: black;
+}
+
+
+
+  .messages {
+    flex: 1 1 auto;
+    background-color: #e9e9e9;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: center;
+    background: none;
+    text-overflow: 1px;
+    display: flex;
   }
+  .messages div {
+    /*animation: move .5s ease-in-out 0.5s 4 alternate;*/
+    overflow:hidden;
+    border: 1px solid transparent;
+    font-family: Century Gothic, sans-serif;
+  }
+  .message-topic {
+    font-weight: bold;
+    font-size: 8vmin;
+    padding-right: 2vw;
+  }
+  .message-content {
+    font-size: 4vmin;
+
+  }
+  #topic-1 {
+    animation: showup-1 7s infinite;
+  }
+  #message-1 {
+    animation: reveal-1 7s infinite;
+  }
+  #message-1 span {
+    animation: slidein-1 7s infinite;
+    overflow-y: visible;
+  }
+
+
+
+  @keyframes showup-1 {
+    0% {opacity:0;border-right-color: transparent;}
+    20% {opacity:1;}
+    35% {border-right-color: transparent;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+@keyframes reveal-1 {
+    0% {opacity:0;width:0vmax;height:0;}
+    20% {opacity:1;width:0vmax;height:5vmin;}
+    30% {width:50vmin;}
+    80% {opacity:1;}
+    100% {opacity:0;width:50vmin;height:5vmin;}
+}
+@keyframes slidein-1 {
+    0% { margin-left:-600px;}
+    20% { margin-left:-600px;}
+    30% { margin-left:0px;}
+    100% { margin-left:0px;}
+}
