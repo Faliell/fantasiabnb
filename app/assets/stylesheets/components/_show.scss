@@ -1,0 +1,17 @@
+a {
+  color: #FFF;
+}
+
+
+.image{
+  margin: 0p;
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100vh;
+  object-fit: cover
+}
