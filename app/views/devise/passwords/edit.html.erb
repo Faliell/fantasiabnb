@@ -1,16 +1,9 @@
 
-<%= render "shared/navbar" %>
-
 <div class="header d-flex justify-content-center p-4">
   <h2>Change your password</h2>
 </div>
 
-=======
 <%= render 'shared/navbar' %>
-
-<h2>Change your password</h2>
->>>>>>> b24370884e1fb46ecce72e1d274915e1c05a4b47
-
 <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
 
