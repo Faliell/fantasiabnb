@@ -17,7 +17,8 @@
             </div>
           </div>
           <div class="product-image">
-            <img src="https://wallpaper.dog/large/17066191.jpg" alt="Hogwarts">
+
+            <%= cl_image_tag place.photo.key, height: 300, width: 400, crop: :fill if place.photo.key %>
             <div class="info">
               <h2> Description</h2>
               <%=place.description%>
