@@ -1,18 +1,29 @@
-<div class="header d-flex justify-content-center p-4">
-  <h2>Booking</h2>
-</div>
+<div class="container">
 
-<h2><%= @place.name %></h2>
+  <div class="header_booking">
+    <h2>Your booking</h2>
+  </div>
 
-<p><strong>Price per day:</strong> <%= @place.price_day %></p>
-<%= cl_image_tag @place.photo.key, height: 300, width: 400, crop: :fill if @place.photo.key %>
+  <div class="info_place">
+    <%= cl_image_tag @place.photo.key, height: 300, width: 400, crop: :fill if @place.photo.key %>
+    <div class="title_desciption">
+      <div class="text_place">
+        <%= @place.name %><br></div>
+      <div><%= @place.description %>
+      </div>
+    <div>
+      <%= @place.price_day %> €</div>
+    </div>
+  </div>
 
+  <div class="input">
+    <%= simple_form_for [@place, @booking] do |f| %>
+      <div><%= f.input :startdate %></div>
+      <div><%= f.input :enddate %></div>
+      <div class="confirm">
+        <%= f.submit "Book", class:"btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
 
-<div class="container p-4">
-  <%= simple_form_for [@place, @booking] do |f| %>
-          <%= f.input :startdate %>
-          <%= f.input :enddate %>
-
-          <%= f.submit "Create", class: "btn btn-primary p-3" %>
-          <% end %>
 </div>

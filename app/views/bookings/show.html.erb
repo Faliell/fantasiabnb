@@ -1,11 +1,13 @@
-<div class="header d-flex justify-content-center p-4">
-  <h2>Booking</h2>
+<div class="container">
+<div class="header_booking">
+  <h2>Thank you for booking with us ! <br>
+  You booked <strong><%= @place.name %> from <%= @booking.startdate %> to <%= @booking.enddate %></strong>
+  </h2>
 </div>
 
-<h3><%= @place.name %></h3>
-<p><strong>Price per day:</strong> $<%= @place.price_day.to_i %></p>
-<p><strong>Total price:</strong> $<%= @booking.total_price.to_i %></p>
-
-<p><strong>Booking from: </strong><%= @booking.startdate.to_formatted_s(:short) %> to <%= @booking.enddate.to_formatted_s(:short) %></p>
-
-<%= cl_image_tag @place.photo.key, height: 300, width: 400, crop: :fill if @place.photo.key %>
+ <div class="info_place">
+    <%= cl_image_tag @place.photo.key, height: 300, width: 400, crop: :fill if @place.photo.key %>
+    <div class="total_price">Your total price is: <br>
+    <%= @booking.total_price %> €</div></div>
+  </div>
+</div>
