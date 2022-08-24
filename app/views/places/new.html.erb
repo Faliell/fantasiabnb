@@ -1,19 +1,15 @@
-<<<<<<< HEAD
 <%= render 'shared/navbar' %>
 
-=======
->>>>>>> master
 <div class="header d-flex justify-content-center p-4">
   <h2>Add a place to rent</h2>
 </div>
 
-<<<<<<< HEAD
 <div class="container">
   <%= simple_form_for(@place) do |f| %>
           <%= f.input :name, placeholder: 'Add a name' %>
           <%= f.input :place_type, placeholder: 'Add a type' %>
           <%= f.input :description, placeholder: 'Add a description' %>
-=======
+
 <div class="container p-4">
   <%= simple_form_for(@place) do |f| %>
           <%= f.input :name, placeholder: 'Add a name' %>
@@ -21,7 +17,6 @@
           <div class="mb-3">
           <%= f.input :description, placeholder: 'Add a description', class:"form-label"%>
           </div>
->>>>>>> master
           <%= f.input :price_day, placeholder: 'Add a price' %>
           <%= f.input :photo, as: :file %>
           <div class="d-grid gap-2 col-2 mx-auto">
