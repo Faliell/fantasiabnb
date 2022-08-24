@@ -1,7 +1,10 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.contentstack.io/v3/assets/blt0952b6ad20dfb00a/blt83c3f9e9f5a50103/6183475d19df7c77cdb1fc44/Rooftop_1200x677.jpg);">
-  <div class="container">
-    <h1>Do you want to live crazy <strong>adventures </strong>into <strong>the places you always saw on the screen</strong>!</h1>
-    <p>Change your life and learn to code at one of our campuses around the world.</p>
-    <a class="btn btn-flat" href="#">Apply now</a>
+  <div class="container_banner">
+      <h1>Do you want to live crazy <strong>adventures </strong>into <strong>the places you always saw on the screen</strong>!</h1>
+      <% if user_signed_in? %>
+        <a class="btn_banner btn btn_flat" href="http://localhost:3000/places">Book <strong>AMAZING </strong>places</a>
+      <% else %>
+        <a class="btn_banner btn btn_flat" href="http://localhost:3000/users/sign_in"><strong>Log in </strong>to discover our places</a>
+      <% end %>
   </div>
 </div>
