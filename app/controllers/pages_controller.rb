@@ -5,4 +5,7 @@ class PagesController < ApplicationController
     @places = Place.all
   end
 
+  def dashboard
+  end
+
 end
