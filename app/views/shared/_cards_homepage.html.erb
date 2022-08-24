@@ -9,11 +9,13 @@
           <div class="product-details">
             <h1><%=place.name%></h1>
             <div class="control">
-              <button class="btn_cards">
-                <span class="price"><%=place.price_day%></span><br>
-                <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                <span class="buy">Book now</span>
-              </button>
+              <form action=<%= place_path(place)%>%>
+                <button class="btn_cards">
+                  <span class="price"><%=place.price_day%></span><br>
+                  <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                  <span class="buy">Book now</span>
+                </button>
+              </form>
             </div>
           </div>
           <div class="product-image">

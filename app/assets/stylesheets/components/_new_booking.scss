@@ -1,0 +1,56 @@
+.header_booking {
+  margin-top: 85px;
+}
+
+.info_place {
+  display: flex;
+  align-items: flex-start;
+  justify-content:flex-start;
+}
+
+
+.title_desciption {
+  padding-left: 10vh;
+  font-size: 25px;
+}
+
+.text_place {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-top: 10vh;
+  font-size: 60px;
+}
+
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.confirm {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 25px;
+}
+
+
+.total_price {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-top: 17vh;
+  padding-left: 10vh;
+  font-size: 30px;
+}
+
+.info_place {
+  padding-left: 25vh;
+  margin-top: 5vh;
+}
