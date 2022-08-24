@@ -6,8 +6,14 @@
 
   <div class="info_place">
     <%= cl_image_tag @place.photo.key, height: 300, width: 400, crop: :fill if @place.photo.key %>
-    <div class="text_place"><div><%= @place.name %></div>
-    <div><%= @place.price_day %> €</div></div>
+    <div class="title_desciption">
+      <div class="text_place">
+        <%= @place.name %><br></div>
+      <div><%= @place.description %>
+      </div>
+    <div>
+      <%= @place.price_day %> €</div>
+    </div>
   </div>
 
 

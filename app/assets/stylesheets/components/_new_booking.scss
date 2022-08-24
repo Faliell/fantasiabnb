@@ -9,12 +9,18 @@
 }
 
 
+.title_desciption {
+  padding-left: 10vh;
+  font-size: 25px;
+}
+
 .text_place {
   font-weight: bold;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  margin-top: 17vh;
+  margin-top: 10vh;
+  font-size: 60px;
 }
 
 
@@ -40,4 +46,11 @@
   justify-content: space-around;
   flex-direction: column;
   margin-top: 17vh;
+  padding-left: 10vh;
+  font-size: 30px;
+}
+
+.info_place {
+  padding-left: 25vh;
+  margin-top: 5vh;
 }
