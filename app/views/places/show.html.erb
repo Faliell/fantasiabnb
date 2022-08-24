@@ -1,0 +1,15 @@
+
+<div class="header d-flex justify-content-center p-4">
+  <h2>Place</h2>
+</div>
+<div>
+<h2><%= @place.name %></h2>
+<h2><%= @place.price_day %></h2>
+<h2><%= @place.description %></h2>
+<h2><%= @place.place_type %></h2>
+</div>
+<%= cl_image_tag @place.photo.key, height: 300, width: 400, crop: :fill if @place.photo.key %>
+
+<button class="btn">
+  <span class="buy">Booking Now</span>
+</button>
