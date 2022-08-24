@@ -9,8 +9,8 @@
 
 <div class="container p-4">
   <%= simple_form_for [@place, @booking] do |f| %>
-          <%= f.input :startdate, as: :string, required: false, input_html: {class: "datepicker"} %>
-          <%= f.input :enddate, as: :string, required: false, input_html: {class: "datepicker"} %>
+          <%= f.input :startdate %>
+          <%= f.input :enddate %>
 
           <%= f.submit "Create", class: "btn btn-primary p-3" %>
           <% end %>
