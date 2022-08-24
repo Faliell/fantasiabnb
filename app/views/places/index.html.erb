@@ -1,12 +1,12 @@
-<div class="header d-flex justify-content-center p-4">
-  <h2>My Places</h2>
+
+
+<div>
+<h2 style="text-align: center;">My Places</h2>
 </div>
 
+<div class="header d-flex justify-content-center p-4">
+  <h2>My Places</h2>
 
-<ul>
-<%@places.each do |place| %>
-<li> <%=place.name%></li>
-<%= cl_image_tag place.photo.key, height: 300, width: 400, crop: :fill if place.photo.key %>
-<%# <%= cl_image_tag place.photo.key, height: 300, width: 400, crop: :fill %>
-<% end %>
-</ul>
+<%= render 'shared/cards_all' %>
+
+</div>

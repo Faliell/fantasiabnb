@@ -1,11 +1,12 @@
 .navbar {
   position: fixed;
   width: 100%;
+  z-index: 1000;
 }
 
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: rgba(250, 238, 227, 1);
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -20,3 +21,5 @@
 .dropdown-toggle {
   border-radius: 50%;
 }
+
+

@@ -3,18 +3,38 @@
   background-position: center;
   padding: 150px 0;
   color: white;
+  overflow: auto;
+  padding-left: 50px;
+
 }
 
 .banner h1 {
-  margin: 0;
+  font-family: "Lucida Console";
+  margin-right: 15%;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
-  font-weight: bold;
+  position: relative;
+  margin-left: 10%;
+  top:40%;
+  word-wrap: break-word;
 }
 
-.banner p {
-  font-size: 20px;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+.btn_banner {
+margin: 11px;
+padding: 10px;
+position: relative;
+top: 60%;
+left: 40%;
+background-color: rgb(154, 126, 102);
 }
+
+
+.btn_banner:hover {
+  margin: 11px;
+  padding: 10px;
+  position: relative;
+  top: 60%;
+  left: 40%;
+  background-color: rgb(154, 126, 102);
+  color: black;
+  }
