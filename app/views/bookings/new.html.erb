@@ -2,8 +2,9 @@
   <h2>Booking</h2>
 </div>
 
-<%= @place.name %>
-<%= @place.price_day %>
+<h2><%= @place.name %></h2>
+
+<p><strong>Price per day:</strong> <%= @place.price_day %></p>
 <%= cl_image_tag @place.photo.key, height: 300, width: 400, crop: :fill if @place.photo.key %>
 
 
