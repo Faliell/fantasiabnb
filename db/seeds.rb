@@ -24,7 +24,7 @@ puts "Create Users"
 place1 = Place.create(name: "Casterly Rock ", place_type: "Castle", description: " Big and rich castle", price_day: 10_000, user: cersei)
 place1.photo.attach(io: File.open("app/assets/images/rockcastle.jpg"), filename: "rockcastle.jpg", content_type: "image/jpg")
 
-place2 = Place.create(name: "Hogwarts ", place_type: "Castle", description:" Big and magic castle", price_day: 9000, user: cersei)
+place2 = Place.create(name: "Hogwarts ", place_type: "Castle", description:" Big and magic castle with many hidden secrets and a minor possibility of being attacked by dark forces.", price_day: 9000, user: cersei)
 place2.photo.attach(io: File.open("app/assets/images/hogwarts.png"), filename: "hogwarts.png", content_type: "image/jpg")
 
 place3 = Place.create(name: "Minas Tirith ", place_type: "Castle", description: " Castle in the rocks", price_day: 8000, user: cersei)
