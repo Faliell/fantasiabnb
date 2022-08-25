@@ -8,4 +8,6 @@ class User < ApplicationRecord
   has_many :bookings, dependent: :destroy
 
   has_one_attached :photo
+
+  validates :email, uniqueness: true
 end
