@@ -16,6 +16,12 @@
     </div>
   </div>
 
+
+<div class="container p-4">
+  <%= simple_form_for [@place, @booking] do |f| %>
+          <%= f.input :startdate %>
+          <%= f.input :enddate %>
+
   <div class="input">
     <%= simple_form_for [@place, @booking] do |f| %>
       <div><%= f.input :startdate %></div>
@@ -25,5 +31,6 @@
       </div>
     <% end %>
   </div>
+
 
 </div>

@@ -1,6 +1,7 @@
 <div class="header d-flex justify-content-center p-4">
   <h2>Sign up</h2>
 </div>
+
 <div class="container d-flex justify-content-center p-4">
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name),
     data: {turbo: false}) do |f| %>
@@ -30,7 +31,7 @@
     </div>
 
     <div class="form-actions form-buttons">
-      <%= f.button :submit, "Sign up", class: "signup_btn" %>
+      <%= f.button :submit, "Sign up", class: "signup_btn btn-primary" %>
       <%= render "devise/shared/links" %>
     </div>
   <% end %>

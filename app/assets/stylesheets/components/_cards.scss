@@ -79,11 +79,11 @@ display: grid;
 }
 
 .btn span {
-	font-family: 'Farsan', cursive;
+	font-family: 'Dosis';
 	transition: transform 0.3s;
   padding: 5px 10px;
-	font-size: 1em;
-	margin:0;
+	font-size: 1.1em;
+	margin: 10px;
 }
 
 .span .price {
@@ -140,6 +140,7 @@ text-align: center;
     left: 0;
     top: 0;
 }
+
 
 .info h2 {text-align: center; font-family: 'arial', serif;}
 .product-image:hover .info{transform: translateX(0);}
