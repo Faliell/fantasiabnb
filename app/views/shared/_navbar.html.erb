@@ -25,7 +25,9 @@
               <%= image_tag "https://media.gqmagazine.fr/photos/61961af186304249e82b5241/2:3/w_600,h_900,c_limit/Harry-Potter.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% end %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Log out", "http://localhost:3000/users/sign_out", class: "dropdown-item", data: {turbo_method: :delete} %>
+              <%= link_to "Dashboard", dashboard_path, class: "dropdown-item" %>
+              <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
+
             </div>
           </li>
         <% else %>
