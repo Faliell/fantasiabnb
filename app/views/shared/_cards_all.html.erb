@@ -1,4 +1,3 @@
-<%# cards %>
 <div class="container_all">
   <h2>Our available places</h2>
 <div class="row">
@@ -8,13 +7,13 @@
         <div id="container">
           <div class="product-details">
             <h1><%=place.name%></h1>
-            <div class="control">
-              <button class="btn_cards">
+            <form action=<%= place_path(place)%>%>
+              <button class="btn_cards" type="submit">
                 <span class="price"><%=place.price_day%></span><br>
                 <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
                 <span class="buy">Book now</span>
               </button>
-            </div>
+            </form>
           </div>
           <div class="product-image">
             <%= cl_image_tag place.photo.key, height: 300, width: 400, crop: :fill if place.photo.key %>

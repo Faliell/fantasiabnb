@@ -1,3 +1,4 @@
+
 <div class="header d-flex justify-content-center p-4">
   <h2>Booking</h2>
 </div>
@@ -6,3 +7,17 @@
 <%= @place.price_day %>
 <%= @booking.total_price %>
 <%= cl_image_tag @place.photo.key, height: 300, width: 400, crop: :fill if @place.photo.key %>
+
+<div class="container">
+<div class="header_booking">
+  <h2>Thank you for booking with us ! <br>
+  You booked <strong><%= @place.name %> from <%= @booking.startdate %> to <%= @booking.enddate %></strong>
+  </h2>
+</div>
+
+ <div class="info_place">
+    <%= cl_image_tag @place.photo.key, height: 300, width: 400, crop: :fill if @place.photo.key %>
+    <div class="total_price">Your total price is: <br>
+    <%= @booking.total_price %> €</div></div>
+  </div>
+</div>

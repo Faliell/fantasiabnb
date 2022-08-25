@@ -2,6 +2,7 @@
 <div class="header d-flex justify-content-center p-4">
   <h2>Place</h2>
 </div>
+
 <div class="container">
   <div class="card">
     <div class="image">
@@ -17,6 +18,18 @@
       <%=  link_to "Book Now!", new_place_booking_path(@place) %>
     </button>
   </div>
+
+<div>
+  <h2><%= @place.name %></h2>
+  <h3>Price per day: $<%= @place.price_day.to_i %></h3>
+  <h4>Type of place: <%= @place.place_type %></h4>
+    <p><%= @place.description %></p>
 </div>
 
+
 <%# <%= cl_image_tag @place.photo.key, height: 300, width: 400, crop: :fill if @place.photo.key %>
+
+<button class="btn">
+  <%=  link_to "Booking Now!", new_place_booking_path(@place), class: "buy" %>
+</button>
+
