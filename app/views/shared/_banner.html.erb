@@ -1,18 +1,20 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.contentstack.io/v3/assets/blt0952b6ad20dfb00a/blt83c3f9e9f5a50103/6183475d19df7c77cdb1fc44/Rooftop_1200x677.jpg);">
   <div class="container_banner">
 
-    <div class="messages">
-      <div id="topic-1" class="message-topic">Fantasiabnb</div>
-      <div id="message-1" class="message-content">
-        <span>Discover fantastic places</span>
-      </div>
-    </div>
+
+        <div class="messages">
+          <div id="topic-1" class="message-topic">Fantasiabnb</div>
+          <div id="message-1" class="message-content">
+            <span>Discover fantastic places</span>
+          </div>
+          </div>
 
 
-    <% if user_signed_in? %>
-      <a class="btn_banner btn btn_flat" href="http://localhost:3000/places">Book <strong>AMAZING </strong>places</a>
-    <% else %>
-      <a class="btn_banner btn btn_flat" href="http://localhost:3000/users/sign_in"><strong>Log in </strong>to discover our places</a>
-    <% end %>
+
+      <% if user_signed_in? %>
+        <a class="btn_banner btn btn_flat" href="http://localhost:3000/places">Book <strong>AMAZING </strong>places</a>
+      <% else %>
+        <a class="btn_banner btn btn_flat" href="http://localhost:3000/users/sign_in"><strong>Log in </strong>to discover our places</a>
+      <% end %>
   </div>
 </div>

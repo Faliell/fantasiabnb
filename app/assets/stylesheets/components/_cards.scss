@@ -130,7 +130,7 @@ text-align: center;
     transition: all 0.3s ease-out;
     transform: translateX(-100%);
     position: absolute;
-    line-height: 1.8;
+    line-height: 1.5;
     text-align: left;
     font-size: 105%;
     cursor: default;
@@ -150,3 +150,8 @@ text-align: center;
 
 .product-image:hover img {transition: all 0.1s ease-out;}
 .product-image:hover img {transform: scale(1.2, 1.2);}
+
+
+.checked {
+  color: orange;
+}

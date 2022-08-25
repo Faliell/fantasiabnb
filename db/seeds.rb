@@ -21,25 +21,25 @@ arthas.photo.attach(io: File.open("app/assets/images/arthas.jpg"), filename: "ar
 
 puts "Create Users"
 
-place1 = Place.create(name: "Casterly Rock ", place_type: "Castle", description: " Big and rich castle", price_day: 10_000, user: cersei)
+place1 = Place.create(name: "Casterly Rock ", place_type: "Castle", description: " Big and rich castle", price_day: 10_000, user: cersei, rating: 4)
 place1.photo.attach(io: File.open("app/assets/images/rockcastle.jpg"), filename: "rockcastle.jpg", content_type: "image/jpg")
 
-place2 = Place.create(name: "Hogwarts ", place_type: "Castle", description:" Big and magic castle with many hidden secrets and a minor possibility of being attacked by dark forces.", price_day: 9000, user: cersei)
+place2 = Place.create(name: "Hogwarts ", place_type: "Castle", description:" Big and magic castle with many hidden secrets and a minor possibility of being attacked by dark forces.", price_day: 9000, user: cersei, rating: 3)
 place2.photo.attach(io: File.open("app/assets/images/hogwarts.png"), filename: "hogwarts.png", content_type: "image/jpg")
 
-place3 = Place.create(name: "Minas Tirith ", place_type: "Castle", description: " Castle in the rocks", price_day: 8000, user: cersei)
+place3 = Place.create(name: "Minas Tirith ", place_type: "Castle", description: " Castle in the rocks", price_day: 8000, user: cersei, rating: 2)
 place3.photo.attach(io: File.open("app/assets/images/minas.jpg"), filename: "minas.jpg", content_type: "image/jpg")
 
-place4 = Place.create(name: "Ogygia Prison ", place_type: "Prison", description: " Famous Prison, and you can scape", price_day: 5000, user: arthas)
+place4 = Place.create(name: "Ogygia Prison ", place_type: "Prison", description: " Famous Prison, and you can scape", price_day: 5000, user: arthas, rating: 3)
 place4.photo.attach(io: File.open("app/assets/images/prison.jpg"), filename: "prison.jpg", content_type: "image/jpg")
 
-place5 = Place.create(name: "House of Black and White ", place_type: "Temple", description: " You can learn a lot there", price_day: 1, user: arthas)
+place5 = Place.create(name: "House of Black and White ", place_type: "Temple", description: " You can learn a lot there", price_day: 1, user: arthas, rating: 2)
 place5.photo.attach(io: File.open("app/assets/images/blackandwhite.jpg"), filename: "blackandwhite.jpg", content_type: "image/jpg")
 
-place6 = Place.create(name: "Tower of Everfrost ", place_type: "Tower", description: " Very cold place", price_day:5000, user: arthas)
+place6 = Place.create(name: "Tower of Everfrost ", place_type: "Tower", description: " Very cold place", price_day:5000, user: arthas, rating: 4)
 place6.photo.attach(io: File.open("app/assets/images/towerofeverfrost.jpg"), filename: "towerofeverfrost.jpg", content_type: "image/jpg")
 
-place7 = Place.create(name: "Creel House", place_type: "House", description: " Strange house, was the Vecna house", price_day: 3000, user: arthas)
+place7 = Place.create(name: "Creel House", place_type: "House", description: " Strange house, was the Vecna house", price_day: 3000, user: arthas, rating: 4)
 place7.photo.attach(io: File.open("app/assets/images/creelhouse.jpg"), filename: "creelhouse.jpg", content_type: "image/jpg")
 
 puts "Create Places"
