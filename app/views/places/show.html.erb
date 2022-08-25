@@ -3,26 +3,21 @@
   <h2>Place</h2>
 </div>
 
-<div class="container ">
-  <div class="card">
+
+<div class="container">
+  <div class="to_be_booked">
     <div class="image">
-      <%= cl_image_tag @place.photo.key, crop: :fill if @place.photo.key %>
+      <%= cl_image_tag @place.photo.key, height: 300, width: 400, crop: :fill if @place.photo.key %>
     </div>
+  <div class="info_to_be_booked">
       <h2><%= @place.name %></h2>
-      <h2><%= @place.price_day %></h2>
+      <h2><%= @place.price_day %> €/ day</h2>
       <p><%= @place.description %></p>
-      <h2><%= @place.place_type %></h2>
-  </div>
+      <p><%= @place.place_type %></p>
   <div class="d-grid gap-2 col-6 mx-auto pt-3">
-    <button class="btn btn-primary" id="buttonpad">
+    <button id="buttonpad">
       <%=  link_to "Book Now!", new_place_booking_path(@place) %>
     </button>
   </div>
+    </div>
   </div>
-
-
-
-
-<button class="btn">
-  <%=  link_to "Booking Now!", new_place_booking_path(@place), class: "buy" %>
-</button>
