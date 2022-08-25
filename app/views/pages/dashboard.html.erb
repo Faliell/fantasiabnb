@@ -5,22 +5,37 @@
 <%= current_user.first_name %>
 
 
-
+<h3>My places:</h3>
 <% current_user.places.each do |place| %>
   <%= place.name %>
 
-  <h3>My bookings:</h3>
+
   <% if place.bookings.empty? %>
     <p>No pending bookings</p>
   <% else %>
     <% place.bookings.each do |booking| %>
       <%= booking.startdate %>
+      <%= booking.enddate %>
+      <%= booking.total_price %>
+      <%= booking.status %>
+      <%  if booking.status == "pending"%>
+          <%= button_to "Accept", accept_place_booking_path(place, booking), method: :patch %>
+          <%= button_to "Decline", decline_place_booking_path(place, booking), method: :patch %>
+
+      <% end %>
+
     <% end %>
   <% end %>
 <% end %>
 
 <%# places I am trying to book %>
+
+<h3>My bookings:</h3>
 <% current_user.bookings.each do |booking| %>
   <%= booking.place.name %>
+  <%= booking.startdate %>
+  <%= booking.enddate %>
+  <%= booking.total_price %>
+  <%= booking.status %>
 <% end %>
 </div>
