@@ -4,11 +4,15 @@
     <div class="header d-flex justify-content-center p-4">
       <h2>Dashboard</h2>
     </div>
+    <div class="header d-flex justify-content-left m-3">
     <h3>My listings:</h3>
+    </div>
+
+    <div class="col-12 col-lg-6">
       <div class="cards_my_places">
         <% current_user.places.each do |place| %>
           <div class="individual_place">
-            <div><%= place.name %></div>
+            <div class="pb-3"><%= place.name %></div>
               <div class="imgdescription">
                 <div id="image_place"><%= cl_image_tag place.photo.key, height: 300, width: 400, crop: :fill if place.photo.key %></div>
                 <% if place.bookings.empty? %>
@@ -29,6 +33,7 @@
           </div>
         <% end %>
       </div>
+    </div>
     <h3>My bookings:</h3>
     <% current_user.bookings.each do |booking| %>
       <%= booking.place.name %>
