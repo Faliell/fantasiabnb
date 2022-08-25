@@ -1,9 +1,9 @@
 
-<div class="header d-flex justify-content-center p-4">
+<div class="header d-flex justify-content-center p-4 ">
   <h2>Place</h2>
 </div>
 
-<div class="container">
+<div class="container ">
   <div class="card">
     <div class="image">
       <%= cl_image_tag @place.photo.key, crop: :fill if @place.photo.key %>
@@ -17,6 +17,7 @@
     <button class="btn btn-primary" id="buttonpad">
       <%=  link_to "Book Now!", new_place_booking_path(@place) %>
     </button>
+  </div>
   </div>
 
 
