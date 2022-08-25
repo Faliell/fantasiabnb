@@ -12,9 +12,9 @@
 
 
       <% if user_signed_in? %>
-        <a class="btn_banner btn btn_flat" >Book <strong>AMAZING </strong>places</a>
+      <%= link_to "Book AMAZING places", places_path, class:"btn_banner btn btn_flat" %>
       <% else %>
-        <a class="btn_banner btn btn_flat" ><strong>Log in </strong>to discover our places</a>
+      <%= link_to "Log in to discover our places", new_user_session_path, class:"btn_banner btn btn_flat" %>
       <% end %>
   </div>
 </div>
