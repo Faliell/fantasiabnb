@@ -12,3 +12,7 @@
 @import "enlarge";
 @import "footer";
 
+body {
+  position: absolute;
+  min-height: 100vh;
+}
