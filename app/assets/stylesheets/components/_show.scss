@@ -1,17 +1,42 @@
-a {
-  color: #FFF;
+.to_be_booked {
+  display: flex;
+  align-items: center;
 }
 
+.info_to_be_booked {
+  margin-left: 5vw;
+}
 
 .image{
   margin: 0p;
   overflow: hidden;
   height: 120px;
+  border-radius: 5px;
   background: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100%;
-  width: 100vh;
-  object-fit: cover
+  display: inline-block;
+  justify-content: space-around;
+  margin-left: 10vw;
+}
+
+#buttonpad {
+  margin: 11px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(154, 126, 102);
+  outline: none;
+  border-radius: 5px;
+  border: none;
+}
+
+
+#buttonpad a {
+  color: white;
+  text-decoration: none;
+}
+
+
+#buttonpad:hover {
+  color: black;
 }

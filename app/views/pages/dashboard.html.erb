@@ -1,41 +1,43 @@
 <%# places I am listing %>
-<div style="margin-top: 100px">
-<h2>Dashboard</h2>
 
-<%= current_user.first_name %>
+<div class="container">
+  <div style="margin-top: 100px">
+    <h2>Dashboard</h2>
+    <h3>Your places:</h3>
+    <div class="cards_my_places">
+      <div class="individual_place">
+        <% current_user.places.each do |place| %>
+                <div><%= place.name %></div>
 
+                <div><%= cl_image_tag place.photo.key, height: 300, width: 400, crop: :fill if place.photo.key %></div>
 
-<h3>My places:</h3>
-<% current_user.places.each do |place| %>
-  <%= place.name %>
+                <div><% if place.bookings.empty? %>
+                  <p>No pending bookings</p>
+                  <% else %>
+                  <% place.bookings.each do |booking| %>
+                    <%= booking.startdate %>
+                    <%= booking.enddate %>
+                    <%= booking.total_price %>
+                    <%= booking.status %>
+                    <%  if booking.status == "pending"%>
+                      <%= button_to "Accept", accept_place_booking_path(place, booking), method: :patch %>
+                      <%= button_to "Decline", decline_place_booking_path(place, booking), method: :patch %>
+                            <% end %>
+                          <% end %>
+                        <% end %>
+                      <% end %></div>
+        </div>
+      </div>
+    </div>
+    <%# places I am trying to book %>
 
-
-  <% if place.bookings.empty? %>
-    <p>No pending bookings</p>
-  <% else %>
-    <% place.bookings.each do |booking| %>
+    <h3>My bookings:</h3>
+    <% current_user.bookings.each do |booking| %>
+      <%= booking.place.name %>
       <%= booking.startdate %>
       <%= booking.enddate %>
       <%= booking.total_price %>
       <%= booking.status %>
-      <%  if booking.status == "pending"%>
-          <%= button_to "Accept", accept_place_booking_path(place, booking), method: :patch %>
-          <%= button_to "Decline", decline_place_booking_path(place, booking), method: :patch %>
-
-      <% end %>
-
     <% end %>
-  <% end %>
-<% end %>
-
-<%# places I am trying to book %>
-
-<h3>My bookings:</h3>
-<% current_user.bookings.each do |booking| %>
-  <%= booking.place.name %>
-  <%= booking.startdate %>
-  <%= booking.enddate %>
-  <%= booking.total_price %>
-  <%= booking.status %>
-<% end %>
+  </div>
 </div>
