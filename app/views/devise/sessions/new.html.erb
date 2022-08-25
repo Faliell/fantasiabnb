@@ -1,5 +1,7 @@
+
 <div class="header d-flex justify-content-center p-4 mt-5">
   <h2>Log in</h2>
+  
 </div>
 <div class="container d-flex justify-content-center p-4">
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name),
@@ -15,7 +17,7 @@
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
 
-  <div class="form-actions form-buttons" href="http://localhost:3000/places">
+  <div class="form-actions form-buttons">
     <%= f.button :submit, "Log in", class: "signup_btn btn-primary"%>
     <%= render "devise/shared/links" %>
   </div>
