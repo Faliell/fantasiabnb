@@ -17,6 +17,8 @@
       <%= booking.startdate %>
       <%= booking.enddate %>
       <%= booking.total_price %>
+      <%= booking.user.first_name%>
+      <%= booking.user.last_name%>
       <%= booking.status %>
       <%  if booking.status == "pending"%>
           <%= button_to "Accept", accept_place_booking_path(place, booking), method: :patch %>
