@@ -2,6 +2,10 @@
 <div style="margin-top: 100px">
 <h2>Dashboard</h2>
 
+<%= current_user.first_name %>
+
+
+
 <% current_user.places.each do |place| %>
   <%= place.name %>
 
@@ -17,6 +21,6 @@
 
 <%# places I am trying to book %>
 <% current_user.bookings.each do |booking| %>
-  <%= booking.place %>
+  <%= booking.place.name %>
 <% end %>
 </div>
