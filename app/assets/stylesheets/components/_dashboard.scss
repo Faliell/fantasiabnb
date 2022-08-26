@@ -1,14 +1,39 @@
 .cards_my_places{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2vw;
-  grid-auto-rows: minmax(100px, auto);
-
-  display: flex;
-  justify-content: space-between;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  flex-grow: 1;
+  margin: 16px;
 }
 
+
 .individual_place {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  justify-content: center;
+
+}
+.imgdescription {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: rgba(250, 238, 227, 1);
+  justify-content: center;
+  width: 400px;
+}
+
+.imgdescription:hover {
+}
+
+.status {
+  padding: 10px 10px 5px 0;
+}
+
+#image_place {
+width: 100%;
+
 
 }
 
