@@ -21,9 +21,14 @@
   border-radius: 5px;
   background-color: rgba(250, 238, 227, 1);
   justify-content: center;
+  width: 400px;
 }
 
 .imgdescription:hover {
+}
+
+.status {
+  padding: 10px 10px 5px 0;
 }
 
 #image_place {

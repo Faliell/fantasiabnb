@@ -20,17 +20,19 @@
             <%= cl_image_tag place.photo.key, height: 300, width: 400, crop: :fill if place.photo.key %>
             <div class="info">
               <h2> <%= place.place_type%></h2>
-              <%=place.description%><br>
+              <p><%=place.description%></p>
+              <br>
+              <p>
               <% if place.rating %>
-              Rating:
-              <% rating_star = place.rating %>
-              <% nul_star = 5 - place.rating %>
-              <% rating_star.times do |i| %>
-                  <span class="fa fa-star checked"></span>
-            <% end %>
-              <% nul_star.times do |i| %>
-                <span class="fa fa-star"></span>
+                <% rating_star = place.rating %>
+                <% nul_star = 5 - place.rating %>
+                <% rating_star.times do |i| %>
+                    <span class="fa fa-star checked"></span>
               <% end %>
+                <% nul_star.times do |i| %>
+                  <span class="fa fa-star"></span>
+                <% end %>
+              </p>
               <% end %>
             </div>
           </div>
