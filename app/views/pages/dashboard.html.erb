@@ -5,45 +5,58 @@
     <div class="header d-flex justify-content-center p-4">
       <h2>Dashboard</h2>
     </div>
-    <div class="header d-flex justify-content-left m-3">
-    <h3>My listings:</h3>
+    <div>
+    <h3 class="my_listing">My listings:</h3>
     </div>
 
-<div class="cards_my_places">
-    <% current_user.places.each do |place| %>
-      <div class="individual_place">
-        <div class="pb-3"><%= place.name %></div>
-          <div class="imgdescription">
-            <div id="image_place"><%= cl_image_tag place.photo.key, height: 300, width: 400, crop: :fill if place.photo.key %></div>
-            <div class="status">
-              <% if place.bookings.empty? %>
-                <p>No pending bookings</p>
-              <% else %>
-                <% place.bookings.each do |booking| %>
-                  <%= booking.startdate %>
-                  <%= booking.enddate %>
-                  <%= booking.total_price %>
-                  <%= booking.status %>
-                  <%  if booking.status == "pending"%>
-                    <%= button_to "Accept", accept_place_booking_path(place, booking), method: :patch %>
-                    <%= button_to "Decline", decline_place_booking_path(place, booking), method: :patch %>
+    <div class="cards_my_places">
+        <% current_user.places.each do |place| %>
+          <div class="individual_place">
+            <div class="pb-3"><%= place.name %></div>
+              <div class="imgdescription">
+                <div id="image_place"><%= cl_image_tag place.photo.key, crop: :fill if place.photo.key %></div>
+                <div class="status">
+                  <% if place.bookings.empty? %>
+                    <p>No pending bookings</p>
+                  <% else %>
+                    <% place.bookings.each do |booking| %>
+                      <strong><%= booking.user.first_name %> <%= booking.user.last_name %> </strong>
+                      would like to book <strong> <%= place.name %> </strong> from
+                      <%= booking.startdate %> to <%= booking.enddate %>. <br>
+                      The total price is <strong><%= booking.total_price %>€</strong>.<br>
+                      <div class="pending">
+                      <%  if booking.status == "pending"%>
+                      <%= button_to "Accept", accept_place_booking_path(place, booking), method: :patch, :class => "btn btn-primary" %>
+                        <%= button_to "Decline", decline_place_booking_path(place, booking), method: :patch %>
+                      <% end %>
+                      </div>
+                    <% end %>
                   <% end %>
-                <% end %>
-              <% end %>
-            </div>
+                </div>
+              </div>
           </div>
+        <% end %>
       </div>
-    <% end %>
-  </div>
-</div>
+    </div>
 
-    <h3>My bookings:</h3>
-    <% current_user.bookings.each do |booking| %>
-      <%= booking.place.name %>
-      <%= booking.startdate %>
-      <%= booking.enddate %>
-      <%= booking.total_price %>
-      <%= booking.status %>
-    <% end %>
+    <div class="header d-flex justify-content-center p-4">
+        <h3>My bookings:</h3>
+    </div>
+
+    <div class="cards_my_places">
+      <% current_user.bookings.each do |booking| %>
+        <div class="individual_place">
+          <div class="pb-3"><%= booking.place.name %></div>
+          <div class="imgdescription">
+            <div id="image_place"><%= cl_image_tag booking.place.photo.key, crop: :fill if booking.place.photo.key %></div>
+            <div class="status">
+              <Strong>Your startdate: </strong><%= booking.startdate %><br>
+              <Strong>Your enddate: </strong><%= booking.enddate %> <br>
+              <Strong>Total price: </strong><%= booking.total_price %> €<br>
+              <%= booking.status %></div>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
