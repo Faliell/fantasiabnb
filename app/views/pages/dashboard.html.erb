@@ -27,7 +27,7 @@
                       <div class="pending">
                       <%  if booking.status == "pending"%>
                       <%= button_to "Accept", accept_place_booking_path(place, booking), method: :patch, :class => "btn btn-primary" %>
-                        <%= button_to "Decline", decline_place_booking_path(place, booking), method: :patch %>
+                        <%= button_to "Decline", decline_place_booking_path(place, booking), method: :patch, :class => "btn btn-primary" %>
                       <% end %>
                       </div>
                     <% end %>
