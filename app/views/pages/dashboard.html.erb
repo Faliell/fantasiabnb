@@ -5,32 +5,29 @@
     <h2>Dashboard</h2>
     <h3>Your places:</h3>
     <div class="cards_my_places">
-      <div class="individual_place">
-        <% current_user.places.each do |place| %>
-                <div><%= place.name %></div>
-
-                <div><%= cl_image_tag place.photo.key, height: 300, width: 400, crop: :fill if place.photo.key %></div>
-
-                <div><% if place.bookings.empty? %>
-                  <p>No pending bookings</p>
-                  <% else %>
-                  <% place.bookings.each do |booking| %>
-                    <%= booking.startdate %>
-                    <%= booking.enddate %>
-                    <%= booking.total_price %>
-                    <%= booking.status %>
-                    <%  if booking.status == "pending"%>
-                      <%= button_to "Accept", accept_place_booking_path(place, booking), method: :patch %>
-                      <%= button_to "Decline", decline_place_booking_path(place, booking), method: :patch %>
-                            <% end %>
-                          <% end %>
-                        <% end %>
-                      <% end %></div>
-        </div>
+      <% current_user.places.each do |place| %>
+        <div class="individual_place">
+            <div><%= place.name %></div>
+            <div class="separate_name">
+            <div id="image_place"><%= cl_image_tag place.photo.key, height: 300, width: 400, crop: :fill if place.photo.key %></div>
+            <% if place.bookings.empty? %>
+              <p>No pending bookings</p>
+            <% else %>
+              <% place.bookings.each do |booking| %>
+                <%= booking.startdate %>
+                <%= booking.enddate %>
+                <%= booking.total_price %>
+                <%= booking.status %>
+                <%  if booking.status == "pending"%>
+                  <%= button_to "Accept", accept_place_booking_path(place, booking), method: :patch %>
+                  <%= button_to "Decline", decline_place_booking_path(place, booking), method: :patch %>
+                <% end %>
+              <% end %>
+            <% end %>
+          </div>
+        <% end %>
       </div>
     </div>
-    <%# places I am trying to book %>
-
     <h3>My bookings:</h3>
     <% current_user.bookings.each do |booking| %>
       <%= booking.place.name %>
