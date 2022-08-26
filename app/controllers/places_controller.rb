@@ -2,7 +2,12 @@ class PlacesController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
-    @places = Place.all
+    if params[:query].present?
+      sql_query = "place_type ILIKE :query"
+      @places = Place.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @places = Place.all
+    end
   end
 
   def show
