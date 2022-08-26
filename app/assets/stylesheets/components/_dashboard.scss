@@ -1,53 +1,60 @@
-.cards_my_places{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 16px;
-  flex-grow: 1;
-  margin: 16px;
+
+.my_listing {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
 }
 
+.cards_my_places{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  flex-grow: 1;
+  align-items: stretch;
+
+}
 
 .individual_place {
   display: flex;
   flex-direction: column;
   border-radius: 5px;
-  background-color: rgb(255, 255, 255);
-  justify-content: center;
-
+  align-items: stretch;
+  max-width: 27vw;
+  max-height: 30vw;
 }
+
+.pb-3 {
+  font-size: large;
+  font-weight: bold;
+}
+
 .imgdescription {
   display: flex;
   flex-direction: column;
   border-radius: 5px;
   background-color: rgba(250, 238, 227, 1);
   justify-content: center;
-  width: 400px;
+  align-items: stretch;
+  justify-content: space-between;
 }
 
-.imgdescription:hover {
+#image_place {
+	overflow: hidden;
+  min-height: 15vw;
+  max-height: 15vw;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
 }
 
 .status {
-  padding: 10px 10px 5px 0;
+  margin: 10px;
 }
 
-#image_place {
-width: 100%;
-
-
-}
-
-.separate_name {
+.pending {
   display: flex;
-  flex-direction: column;
-  border-radius: 5px;
-  background-color: rgba(250, 238, 227, 1);
-  justify-content: center;
-align-items: center;
+  justify-content: space-around;
+  margin-right: 4vw;
+  margin-left: 4vw;
+  margin-top: 1vw;
 }
 
-#image_place {
-width: 100%;
-height: 100%;
-object-fit: cover;
-}
