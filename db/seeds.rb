@@ -29,7 +29,7 @@ batman.photo.attach(io: File.open("app/assets/images/batman.jpg"), filename: "ba
 
 puts "Create Users"
 
-place1 = Place.create(name: "Casterly Rock ", place_type: "Castle", description: " Big and rich castle", price_day: 10_000, user: cersei)
+place1 = Place.create(name: "Casterly Rock ", place_type: "Castle", description: " Big and rich castle", price_day: 10_000, user: cersei, rating: 4)
 place1.photo.attach(io: File.open("app/assets/images/rockcastle.jpg"), filename: "rockcastle.jpg", content_type: "image/jpg")
 
 place2 = Place.create(name: "Hogwarts ", place_type: "Castle", description:" Big and magic castle with many hidden secrets and a minor possibility of being attacked by dark forces.", price_day: 9000, user: cersei, rating: 3)
