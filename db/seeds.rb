@@ -68,7 +68,7 @@ place11 = Place.create(name: "Death Star", place_type: "Other", description: " W
 price_day: 2999, user: arthas, rating: 2)
 place11.photo.attach(io: File.open("app/assets/images/deathstar.jpg"), filename: "deathstar.jpg", content_type: "image/jpg")
 
-place12 = Place.create(name: "Wakanda", place_type: "City", description: " Wakanda Forever!",
+place12 = Place.create(name: "Wakanda", place_type: "Other", description: " Wakanda Forever!",
 price_day: 1000000, user: arthas, rating: 5)
 place12.photo.attach(io: File.open("app/assets/images/wakanda.jpg"), filename: "wakanda.jpg", content_type: "image/jpg")
 
