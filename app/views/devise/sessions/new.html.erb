@@ -1,7 +1,7 @@
 
 <div class="header d-flex justify-content-center p-4 mt-5">
   <h2>Log in</h2>
-  
+
 </div>
 <div class="container d-flex justify-content-center p-4">
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name),
@@ -19,6 +19,8 @@
 
   <div class="form-actions form-buttons">
     <%= f.button :submit, "Log in", class: "signup_btn btn-primary"%>
+  </div>
+  <div class="form-actions form-buttons">
     <%= render "devise/shared/links" %>
   </div>
 <% end %>
