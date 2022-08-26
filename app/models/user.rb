@@ -10,4 +10,7 @@ class User < ApplicationRecord
   has_one_attached :photo
 
   validates :email, uniqueness: true
+  validates :first_name, presence: true, length: { minimum: 2, maximum: 20 }
+  validates :last_name, presence: true, length: { minimum: 2, maximum: 20 }
+
 end
