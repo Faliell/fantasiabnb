@@ -1,4 +1,50 @@
 
+
+<div class="container p-3 mt-5 d-flex justify-content-center">
+  <%= form_with url: places_path, method: :get do %>
+    <%= text_field_tag :query,
+      "",
+      class: "d-none"
+    %>
+    <%= submit_tag "View All", class: "btn btn-primary m-3" %>
+  <% end %>
+  <%= form_with url: places_path, method: :get do %>
+    <%= text_field_tag :query,
+      "Castle",
+      class: "d-none"
+    %>
+    <%= submit_tag "Castle", class: "btn btn-primary m-3" %>
+  <% end %>
+  <%= form_with url: places_path, method: :get do %>
+    <%= text_field_tag :query,
+      "House",
+      class: "d-none"
+    %>
+    <%= submit_tag "House", class: "btn btn-primary m-3" %>
+  <% end %>
+  <%= form_with url: places_path, method: :get do %>
+    <%= text_field_tag :query,
+      "Prison",
+      class: "d-none"
+    %>
+    <%= submit_tag "Prison", class: "btn btn-primary m-3" %>
+  <% end %>
+  <%= form_with url: places_path, method: :get do %>
+    <%= text_field_tag :query,
+      "Tower",
+      class: "d-none"
+    %>
+    <%= submit_tag "Tower", class: "btn btn-primary m-3" %>
+  <% end %>
+  <%= form_with url: places_path, method: :get do %>
+    <%= text_field_tag :query,
+      "Temple",
+      class: "d-none"
+    %>
+    <%= submit_tag "Temple", class: "btn btn-primary m-3" %>
+  <% end %>
+</div>
+
 <div>
 <%= render 'shared/cards_all' %>
 <%= yield%>
