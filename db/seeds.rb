@@ -41,7 +41,9 @@ place3.photo.attach(io: File.open("app/assets/images/minas.jpg"), filename: "min
 place4 = Place.create(name: "Ogygia Prison ", place_type: "Prison", description: " Famous Prison, and you can escape. Free access to the gym.", price_day: 5000, user: arthas, rating: 3)
 place4.photo.attach(io: File.open("app/assets/images/prison.jpg"), filename: "prison.jpg", content_type: "image/jpg")
 
-place5 = Place.create(name: "House of Black and White ", place_type: "Temple", description: " You can learn a lot here! Professional assasin workshops available.", price_day: 1, user: arthas, rating: 2)
+
+place5 = Place.create(name: "House of Black and White ", place_type: "Other", description: " You can learn a lot there", price_day: 1, user: arthas, rating: 2)
+
 place5.photo.attach(io: File.open("app/assets/images/blackandwhite.jpg"), filename: "blackandwhite.jpg", content_type: "image/jpg")
 
 place6 = Place.create(name: "Tower of Everfrost ", place_type: "Tower", description: " Very cold place", price_day:5000, user: arthas, rating: 4)
@@ -51,18 +53,18 @@ place7 = Place.create(name: "Creel House", place_type: "House", description: " S
 place7.photo.attach(io: File.open("app/assets/images/creelhouse.jpg"), filename: "creelhouse.jpg", content_type: "image/jpg")
 
 place8 = Place.create(name: "Swamp House", place_type: "House", description: " Come and get your swamp on!",
-price_day: 400, user: cersei, rating: 5)
+price_day: 400, user: shrek, rating: 5)
 place8.photo.attach(io: File.open("app/assets/images/Swamphouse.jpg"), filename: "Swamphouse.jpg", content_type: "image/jpg")
 
 place9 = Place.create(name: "Bat Cave", place_type: "Cave", description: " Cave of the legendary Bruce Wayne.",
-price_day: 3000, user: cersei, rating: 4)
+price_day: 3000, user: batman, rating: 4)
 place9.photo.attach(io: File.open("app/assets/images/batcave.jpg"), filename: "batcave.jpg", content_type: "image/jpg")
 
 place10 = Place.create(name: "Dracula Castle", place_type: "Castle", description: " Come and get your b**** sucked!",
 price_day: 9000, user: cersei, rating: 4)
 place10.photo.attach(io: File.open("app/assets/images/brancastle.jpg"), filename: "brancastle.jpg", content_type: "image/jpg")
 
-place11 = Place.create(name: "Death Star", place_type: "Planet", description: " Welcome to the Dark Side",
+place11 = Place.create(name: "Death Star", place_type: "Other", description: " Welcome to the Dark Side",
 price_day: 2999, user: arthas, rating: 2)
 place11.photo.attach(io: File.open("app/assets/images/deathstar.jpg"), filename: "deathstar.jpg", content_type: "image/jpg")
 
@@ -70,7 +72,7 @@ place12 = Place.create(name: "Wakanda", place_type: "City", description: " Wakan
 price_day: 1000000, user: arthas, rating: 5)
 place12.photo.attach(io: File.open("app/assets/images/wakanda.jpg"), filename: "wakanda.jpg", content_type: "image/jpg")
 
-place13 = Place.create(name: "Pirates of The Caribbean Ship", place_type: "Ship", description: " Spend some time with Captain Jack Sparrow.",
+place13 = Place.create(name: "Pirates of The Caribbean Ship", place_type: "Other", description: " Spend some time with Captain Jack Sparrow.",
 price_day: 4000, user: arthas, rating: 4)
 place13.photo.attach(io: File.open("app/assets/images/pirates.jpg"), filename: "pirates.jpg", content_type: "image/jpg")
 
@@ -82,7 +84,7 @@ place16 = Place.create(name: "Flinstones House", place_type: "House", descriptio
 price_day: 1799, user: arthas, rating: 3)
 place16.photo.attach(io: File.open("app/assets/images/flinstones.jpg"), filename: "flinstones.jpg", content_type: "image/jpg")
 
-place17 = Place.create(name: "Walking Dead Jail", place_type: "Jail", description: " For thrillseekers only!",
+place17 = Place.create(name: "Walking Dead Jail", place_type: "Prison", description: " For thrillseekers only!",
 price_day: 6999, user: arthas, rating: 5)
 place17.photo.attach(io: File.open("app/assets/images/walkingdead.jpg"), filename: "walkingdead.jpg", content_type: "image/jpg")
 
