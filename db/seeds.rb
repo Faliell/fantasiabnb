@@ -22,7 +22,7 @@ arthas.photo.attach(io: File.open("app/assets/images/arthas.jpg"), filename: "ar
 shrek = User.create(first_name: "Shrek", last_name: "Oger", email: "shrek@oger.com", password: "123123")
 shrek.photo.attach(io: File.open("app/assets/images/shrek.jpg"), filename: "shrek.jpg", content_type: "image/jpg")
 
-batman = User.create(first_name: "Batman", last_name: "", email: "batman@gotham.com", password: "123123")
+batman = User.create(first_name: "The", last_name: "Batman", email: "batman@gotham.com", password: "123123")
 batman.photo.attach(io: File.open("app/assets/images/batman.jpg"), filename: "batman.jpg", content_type: "image/jpg")
 
 
