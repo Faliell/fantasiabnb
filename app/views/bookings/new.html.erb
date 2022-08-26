@@ -4,8 +4,11 @@
     <h2>Your booking</h2>
   </div>
 
-  <div class="info_place">
-    <%= cl_image_tag @place.photo.key, height: 300, width: 400, crop: :fill if @place.photo.key %>
+  <div class="info_place rounder">
+    <div class="image d-flex justify-content-center p-4">
+      <div class="border" style="border-radius: 50px"><%= cl_image_tag @place.photo.key, height: 300, width: 400, crop: :fill if @place.photo.key %>
+      </div>
+    </div>
     <div class="title_desciption">
       <div class="text_place">
         <%= @place.name %><br></div>
@@ -17,19 +20,15 @@
   </div>
 
 
-  <div class="container p-4">
-
-  <div class="input">
-    <%= simple_form_for [@place, @booking] do |f| %>
-      <div><%= f.input :startdate %></div>
-      <div><%= f.input :enddate %></div>
-      <div class="confirm">
-        <%= f.submit "Book", class:"btn btn-primary" %>
-      </div>
-    <% end %>
-  </div>
-
-
-  </div>
+  <div class="container d-flex justify-content-center p-4 rounded">
+    <div class="input">
+      <%= simple_form_for [@place, @booking] do |f| %>
+        <div><%= f.input :startdate %></div>
+        <div><%= f.input :enddate %></div>
+        <div class="confirm">
+          <%= f.submit "Book", class:"btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
