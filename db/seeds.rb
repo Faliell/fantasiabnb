@@ -55,7 +55,7 @@ place7.photo.attach(io: File.open("app/assets/images/creelhouse.jpg"), filename:
 place8 = Place.create(name: "Swamp House", place_type: "House", description: " Come and get your swamp on!", price_day: 400, user: shrek, rating: 5)
 place8.photo.attach(io: File.open("app/assets/images/Swamphouse.jpg"), filename: "Swamphouse.jpg", content_type: "image/jpg")
 
-place9 = Place.create(name: "Bat Cave", place_type: "Cave", description: " Cave of the legendary Bruce Wayne.", price_day: 3000, user: batman, rating: 4)
+place9 = Place.create(name: "Bat Cave", place_type: "Other", description: " Cave of the legendary Bruce Wayne.", price_day: 3000, user: batman, rating: 4)
 place9.photo.attach(io: File.open("app/assets/images/batcave.jpg"), filename: "batcave.jpg", content_type: "image/jpg")
 
 place10 = Place.create(name: "Dracula Castle", place_type: "Castle", description: " Come and get your b**** sucked!", price_day: 9000, user: cersei, rating: 4)
