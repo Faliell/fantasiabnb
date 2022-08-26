@@ -1,7 +1,9 @@
 <nav class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
-      <%= cl_image_tag("logo_n6rbf0") %>
+
+      <%= image_tag("https://res.cloudinary.com/faliell/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1661438386/development/logo_n6rbf0.jpg")  %>
+
       <%= Fantasiabnb %>
     <% end %>
 
@@ -13,10 +15,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active pt-2">
-            <%= link_to "List your place", new_place_path, class: "nav-link" %>
+          <li class="nav-item active">
+            <%= link_to "Create a new place", new_place_path, class: "nav-link" %>
           </li>
-          <li class="nav-item pt-2">
+          <li class="nav-item">
             <%= link_to "Browse places", places_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
