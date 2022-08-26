@@ -38,10 +38,12 @@ place2.photo.attach(io: File.open("app/assets/images/hogwarts.png"), filename: "
 place3 = Place.create(name: "Minas Tirith ", place_type: "Castle", description: " Castle in the rocks", price_day: 8000, user: cersei, rating: 2)
 place3.photo.attach(io: File.open("app/assets/images/minas.jpg"), filename: "minas.jpg", content_type: "image/jpg")
 
-place4 = Place.create(name: "Ogygia Prison ", place_type: "Prison", description: " Famous Prison, and you can scape", price_day: 5000, user: arthas, rating: 3)
+place4 = Place.create(name: "Ogygia Prison ", place_type: "Prison", description: " Famous Prison, and you can escape. Free access to the gym.", price_day: 5000, user: arthas, rating: 3)
 place4.photo.attach(io: File.open("app/assets/images/prison.jpg"), filename: "prison.jpg", content_type: "image/jpg")
 
+
 place5 = Place.create(name: "House of Black and White ", place_type: "Other", description: " You can learn a lot there", price_day: 1, user: arthas, rating: 2)
+
 place5.photo.attach(io: File.open("app/assets/images/blackandwhite.jpg"), filename: "blackandwhite.jpg", content_type: "image/jpg")
 
 place6 = Place.create(name: "Tower of Everfrost ", place_type: "Tower", description: " Very cold place", price_day:5000, user: arthas, rating: 4)

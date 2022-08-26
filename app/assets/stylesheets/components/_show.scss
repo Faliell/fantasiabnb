@@ -1,6 +1,7 @@
 .to_be_booked {
   display: flex;
   align-items: center;
+  min-height: 70vh;
 }
 
 .info_to_be_booked {
@@ -27,7 +28,7 @@
   background-color: rgb(154, 126, 102);
   outline: none;
   border-radius: 5px;
-  border: none;
+  border: 1px solid transparent;
 }
 
 
