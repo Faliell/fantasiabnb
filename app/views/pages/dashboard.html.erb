@@ -23,7 +23,7 @@
                       <strong><%= booking.user.first_name %> <%= booking.user.last_name %> </strong>
                       would like to book <strong> <%= place.name %> </strong> from
                       <%= booking.startdate %> to <%= booking.enddate %>. <br>
-                      The total price is <strong><%= booking.total_price %>€</strong>.<br>
+                      The total price is <strong><%= booking.total_price.to_i %>€</strong>.<br>
                       <div class="pending">
                       <%  if booking.status == "pending"%>
                       <%= button_to "Accept", accept_place_booking_path(place, booking), method: :patch, :class => "btn btn-primary" %>
@@ -52,7 +52,7 @@
             <div class="status">
               <Strong>Your startdate: </strong><%= booking.startdate %><br>
               <Strong>Your enddate: </strong><%= booking.enddate %> <br>
-              <Strong>Total price: </strong><%= booking.total_price %> €<br>
+              <Strong>Total price: </strong><%= booking.total_price.to_i %> €<br>
               <%= booking.status %></div>
           </div>
         </div>
