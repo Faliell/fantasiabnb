@@ -5,7 +5,7 @@
 <div class="container p-3">
   <%= simple_form_for (@place) do |f| %>
           <%= f.input :name, placeholder: 'Add a name' %>
-          <%= f.input :place_type, placeholder: 'Add a type' %>
+          <%= f.input :place_type, selected: 1 , collection: ["Castle", "Tower", "House", "Prison", "Temple"] %>
           <div class="mb-3">
           <%= f.input :description, placeholder: 'Add a description', class:"form-label"%>
           </div>

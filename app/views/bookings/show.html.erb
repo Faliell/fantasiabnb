@@ -13,6 +13,6 @@
  <div class="info_place">
     <%= cl_image_tag @place.photo.key, height: 300, width: 400, crop: :fill if @place.photo.key %>
     <div class="total_price">Your total price is: <br>
-    <%= @booking.total_price %> €</div></div>
+    <%= @booking.total_price.to_i%> €</div></div>
   </div>
 </div>

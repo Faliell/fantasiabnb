@@ -10,7 +10,7 @@
 
             <form action=<%= place_path(place)%>%>
               <button class="btn_cards" type="submit">
-                <span class="price"><%=place.price_day%></span><span>€</span><br>
+                <span class="price"><%=place.price_day.to_i%></span><span>€</span><br>
                 <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
                 <span class="buy">Book now</span>
               </button>
